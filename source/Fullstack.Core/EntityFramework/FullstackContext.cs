@@ -5,7 +5,7 @@ namespace Fullstack.Core.EntityFramework {
     public class FullstackContext : DbContext {
 
         public FullstackContext()
-            : base("name=FullstackContext") {
+            : base("name=FullstackContext") {            
         }
 
         public DbSet<User> User { get; set; }
