@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Http;
+using System.Web.Routing;
 
 namespace Fullstack.Web
 {
@@ -8,6 +9,7 @@ namespace Fullstack.Web
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
     }
 }
