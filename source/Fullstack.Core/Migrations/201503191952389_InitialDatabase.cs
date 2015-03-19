@@ -1,7 +1,9 @@
-using System.Data.Entity.Migrations;
 namespace Fullstack.Core.Migrations
-{   
-    public partial class InitialCreate : DbMigration
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class InitialDatabase : DbMigration
     {
         public override void Up()
         {
@@ -10,7 +12,7 @@ namespace Fullstack.Core.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(maxLength: 256, nullable: false),
+                        Name = c.String(nullable: false, maxLength: 512),
                         User_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -22,9 +24,10 @@ namespace Fullstack.Core.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(maxLength: 256, nullable: false),
-                        Email = c.String(maxLength: 256, nullable: false),
-                        Password = c.String(maxLength: 124, nullable: false),
+                        UserName = c.String(nullable: false, maxLength: 512),
+                        Name = c.String(nullable: false, maxLength: 512),
+                        Email = c.String(nullable: false, maxLength: 512),
+                        PasswordHash = c.String(nullable: false, maxLength: 512),
                     })
                 .PrimaryKey(t => t.Id);
             

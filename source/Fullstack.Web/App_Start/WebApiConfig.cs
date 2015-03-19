@@ -1,21 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace Fullstack.Web
 {
-    public static class WebApiConfig
+    public class WebApiConfig
     {
-        public static void Register(HttpConfiguration config)
-        {
-            config.MapHttpAttributeRoutes();
+        private readonly HttpConfiguration config;
+        public WebApiConfig(HttpConfiguration config) {
+            this.config = config;
+        }
 
-            config.Routes.MapHttpRoute(
+        public WebApiConfig RegisterRoutes()
+        {
+            this.config.MapHttpAttributeRoutes();
+
+            this.config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            return this;
+        }
+
+        public WebApiConfig ConfigureFormatters() {
+            //var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
+            //jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+            return this;
         }
     }
 }
