@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fullstack.Web", "Fullstack.Web\Fullstack.Web.csproj", "{DCB170A8-F117-4A0F-AEC3-1A12CC2659F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fullstack.Core", "Fullstack.Core\Fullstack.Core.csproj", "{DADCB5A1-7AB0-445E-A665-8102A58C9FF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCB170A8-F117-4A0F-AEC3-1A12CC2659F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB170A8-F117-4A0F-AEC3-1A12CC2659F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCB170A8-F117-4A0F-AEC3-1A12CC2659F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCB170A8-F117-4A0F-AEC3-1A12CC2659F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DADCB5A1-7AB0-445E-A665-8102A58C9FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DADCB5A1-7AB0-445E-A665-8102A58C9FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DADCB5A1-7AB0-445E-A665-8102A58C9FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DADCB5A1-7AB0-445E-A665-8102A58C9FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
